@@ -3,6 +3,19 @@ import Order from "@/lib/models/Order";
 import { connectToDB } from "@/lib/mongoDB";
 import { NextRequest, NextResponse } from "next/server";
 import { stripe } from "@/lib/stripe";
+import Stripe from "stripe";
+
+interface CustomSession extends Stripe.Checkout.Session {
+  shipping?: {
+    address: {
+      line1: string;
+      city: string;
+      state: string;
+      postal_code: string;
+      country: string;
+    };
+  };
+}
 
 export const POST = async (req: NextRequest) => {
   try {
@@ -16,7 +29,7 @@ export const POST = async (req: NextRequest) => {
     );
 
     if (event.type === "checkout.session.completed") {
-      const session = event.data.object;
+      const session = event.data.object as CustomSession;
 
       const customerInfo = {
         clerkId: session?.client_reference_id,
