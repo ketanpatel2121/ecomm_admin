@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <!-- Stylish sofa icon -->
+  <path d="M25 25 C25 20 30 20 35 20 L45 20 C50 20 55 20 55 25 L55 35 L25 35 L25 25 Z
+           M28 35 L28 40 M52 35 L52 40
+           M20 28 L60 28 M20 32 L60 32" 
+        stroke="#1a56db" 
+        stroke-width="2" 
+        fill="#2563eb"
+        stroke-linecap="round"/>
+  
+  <!-- Text FurniStyle -->
+  <text x="70" y="35" 
+        font-family="'Helvetica Neue', Arial, sans-serif" 
+        font-size="28" 
+        font-weight="700" 
+        letter-spacing="-0.5">
+    <tspan fill="#1e40af">Furni</tspan><tspan fill="#1e293b">Style</tspan>
+  </text>
+  
+  <!-- Decorative dot -->
+  <circle cx="180" y="28" r="3" fill="#2563eb"/>
+</svg>
